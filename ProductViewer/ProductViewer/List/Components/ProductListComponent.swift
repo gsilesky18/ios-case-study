@@ -21,6 +21,10 @@ struct ProductListComponent: Component {
         view.priceLabel.text = item.price
         view.productImage.image = item.image
     }
+    
+    func selectView(view: ProductListView, item: ListItemViewState) {
+        dispatcher?.triggerEvent(ListItemPressed())
+    }
 }
 
 extension ProductListComponent: HarmonyLayoutComponent {

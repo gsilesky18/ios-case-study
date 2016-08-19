@@ -9,15 +9,28 @@
 import Foundation
 import Tempo
 
+/*
+ Coordinator for the product list
+ */
 class ListCoordinator: TempoCoordinator {
     
     // MARK: Presenters, view controllers, view state.
     
     var presenters = [TempoPresenterType]() {
         didSet {
-            for presenter in presenters {
-                presenter.present(viewState)
-            }
+            updateUI()
+        }
+    }
+    
+    private var viewState: ListViewState {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    private func updateUI() {
+        for presenter in presenters {
+            presenter.present(viewState)
         }
     }
     
@@ -27,19 +40,22 @@ class ListCoordinator: TempoCoordinator {
         return ListViewController.viewControllerFor(coordinator: self)
     }()
     
-    private var viewState: ListViewState {
-        didSet {
-            for presenter in presenters {
-                presenter.present(viewState)
-            }
-        }
-    }
-    
     // MARK: Init
     
     required init() {
         viewState = ListViewState(listItems: [])
         updateState()
+        registerListeners()
+    }
+    
+    // MARK: ListCoordinator
+    
+    private func registerListeners() {
+        dispatcher.addObserver(ListItemPressed.self) { [weak self] e in
+            let alert = UIAlertController(title: "Item selected!", message: "🐶", preferredStyle: .Alert)
+            alert.addAction( UIAlertAction(title: "OK", style: .Cancel, handler: nil) )
+            self?.viewController.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     func updateState() {
