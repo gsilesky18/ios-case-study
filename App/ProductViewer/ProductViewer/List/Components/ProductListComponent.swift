@@ -12,8 +12,7 @@ struct ProductListComponent: Component {
     var dispatcher: Dispatcher?
 
     func prepareView(view: ProductListView, item: ListItemViewState) {
-        view.layer.borderColor = UIColor.lightGrayColor().CGColor
-        view.layer.borderWidth = HarmonyScreen.onePixel
+        // Called on first view or ProductListView
     }
     
     func configureView(view: ProductListView, item: ListItemViewState) {

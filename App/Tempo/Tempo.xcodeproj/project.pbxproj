@@ -85,6 +85,7 @@
 		5BBBB0901D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutTileGenerator.swift; sourceTree = "<group>"; };
 		5BBBB0911D662CC000F5D57B /* HarmonyTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyTestCell.swift; sourceTree = "<group>"; };
 		5BBBB0931D662CC000F5D57B /* UICollectionView+HarmonyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+HarmonyLayout.swift"; sourceTree = "<group>"; };
+		5BDE2D981D6788360063D284 /* Tempo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tempo.playground; sourceTree = "<group>"; };
 		5BFB00A71D662B6100AAB3D0 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		5BFB00A91D662B7500AAB3D0 /* Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		5BFB00AB1D662B7C00AAB3D0 /* NibLoadedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadedType.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		5B0F2EE61D66280A00AA252C = {
 			isa = PBXGroup;
 			children = (
+				5BDE2D981D6788360063D284 /* Tempo.playground */,
 				5B0F2EF21D66280A00AA252C /* Tempo */,
 				5B0F2EF11D66280A00AA252C /* Products */,
 			);

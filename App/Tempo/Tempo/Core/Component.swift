@@ -50,9 +50,6 @@ public protocol Component: ComponentType {
     func shouldHighlightView(view: View, item: Item) -> Bool
     func didFocus(frame: CGRect?, coordinateSpace: UICoordinateSpace?, item: Item)
     func focusAccessibility(view: View, item: Item)
-    
-    func dequeueWrapper<Container: ReusableViewItemContainer>(container: Container, item: Item) -> ComponentWrapper<Container.Cell>
-    func visibleWrapper<Container: ReusableViewItemContainer>(container: Container, item: Item) -> ComponentWrapper<Container.Cell>?
 }
 
 public extension Component {
@@ -118,13 +115,7 @@ public extension ComponentType where Self: Component {
         }
     }
     
-    func dequeueWrapper<Container: ReusableViewItemContainer>(container: Container, viewState: TempoViewStateItem) -> ComponentWrapper<Container.Cell> {
-        return dequeueWrapper(container, item: viewState as! Self.Item)
-    }
-    
-    func visibleWrapper<Container: ReusableViewItemContainer>(container: Container, viewState: TempoViewStateItem) -> ComponentWrapper<Container.Cell>? {
-        return visibleWrapper(container, item: viewState as! Self.Item)
-    }
+
 }
 
 public extension Component where View: Reusable, View: Creatable {
@@ -138,5 +129,13 @@ public extension Component where View: Reusable, View: Creatable {
     
     func visibleWrapper<Container: ReusableViewItemContainer>(container: Container, item: Item) -> ComponentWrapper<Container.Cell>? {
         return container.visibleWrapper(View.self)
+    }
+    
+    func dequeueWrapper<Container: ReusableViewItemContainer>(container: Container, viewState: TempoViewStateItem) -> ComponentWrapper<Container.Cell> {
+        return dequeueWrapper(container, item: viewState as! Self.Item)
+    }
+    
+    func visibleWrapper<Container: ReusableViewItemContainer>(container: Container, viewState: TempoViewStateItem) -> ComponentWrapper<Container.Cell>? {
+        return visibleWrapper(container, item: viewState as! Self.Item)
     }
 }

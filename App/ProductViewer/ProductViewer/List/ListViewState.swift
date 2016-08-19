@@ -8,6 +8,7 @@
 
 import Tempo
 
+/// List view state
 struct ListViewState: TempoViewState, TempoSectionedViewState {
     var listItems: [TempoViewStateItem]
     
@@ -16,6 +17,7 @@ struct ListViewState: TempoViewState, TempoSectionedViewState {
     }
 }
 
+/// View state for each list item.
 struct ListItemViewState: TempoViewStateItem, Equatable {
     let title: String
     let price: String
