@@ -1,5 +1,5 @@
 //
-//  HarmonyLayoutSection.swift
+//  HarmonyLayoutSectionAttributes.swift
 //  HarmonyKit
 //
 //  Created by Adam May on 5/12/16.
@@ -20,49 +20,50 @@ import Foundation
  Per `SequenceType`, sections are destructively "consumed" by iteration, since the calculation
  of a given layout attributes can be dependent on previous iterations.
  */
-struct HarmonyLayoutSection: SequenceType {
+struct HarmonyLayoutSectionAttributes: Sequence {
     let style: HarmonySectionStyle
-    let indexPaths: [NSIndexPath]
+    let indexPaths: [IndexPath]
     let layout: HarmonyLayout
 
-    init(indexPaths: [NSIndexPath], layout: HarmonyLayout, style: HarmonySectionStyle) {
+    init(indexPaths: [IndexPath], layout: HarmonyLayout, style: HarmonySectionStyle) {
         self.indexPaths = indexPaths
         self.layout = layout
         self.style = style
     }
 
-    func generate() -> AnyGenerator<HarmonyCellAttributes> {
+    func makeIterator() -> AnyIterator<HarmonyCellAttributes> {
         switch style {
         case .grid:
-            return AnyGenerator(HarmonyTileGenerator(layout: layout, indexPaths: indexPaths))
+            return AnyIterator(HarmonyTileGenerator(layout: layout, indexPaths: indexPaths))
         case .list:
-            return AnyGenerator(HarmonyCellGenerator(layout: layout, indexPaths: indexPaths))
+            return AnyIterator(HarmonyCellGenerator(layout: layout, indexPaths: indexPaths))
         }
     }
 }
 
-extension HarmonyLayoutSection {
+extension HarmonyLayoutSectionAttributes {
     /**
      Returns a new section that offsets the frame of the section's attributes vertically by the
      given amount.
 
-     - Parameter dy: The amount offset to offset in points.
+     - Parameter dx: The amount to offset horizontally in points.
+     - Parameter dy: The amount to offset vertically in points.
      */
-    func offsetBy(dy: CGFloat) -> AnySequence<HarmonyCellAttributes> {
+    func offsetBy(dx: CGFloat, dy: CGFloat) -> AnySequence<HarmonyCellAttributes> {
         return AnySequence(
             map { attributes in
                 let attrs = attributes.copy() as! HarmonyCellAttributes
-                attrs.frame = attributes.frame.offsetBy(dx: 0, dy: dy)
+                attrs.frame = attributes.frame.offsetBy(dx: dx, dy: dy)
                 return attrs
             }
         )
     }
 }
 
-protocol HarmonySectionGenerator: GeneratorType {
-    var indexPaths: [NSIndexPath] { get set }
+protocol HarmonySectionGenerator: IteratorProtocol {
+    var indexPaths: [IndexPath] { get set }
 
-    mutating func next(indexPath: NSIndexPath) -> HarmonyCellAttributes
+    mutating func next(_ indexPath: IndexPath) -> HarmonyCellAttributes
 }
 
 extension HarmonySectionGenerator {

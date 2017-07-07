@@ -12,28 +12,13 @@
 		5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */; };
 		5B2675A21D674B400015A238 /* ListEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2675A11D674B400015A238 /* ListEvents.swift */; };
 		5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B302A8E1D663A8500FA2FFD /* ProductListComponent.swift */; };
+		5B518D941F1010E1005C013B /* Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B518D931F1010E1005C013B /* Tempo.framework */; };
 		5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08111D6632EC006BF0C0 /* ListCoordinator.swift */; };
 		5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08131D663304006BF0C0 /* ListViewController.swift */; };
 		5BEF08161D66333C006BF0C0 /* ListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08151D66333C006BF0C0 /* ListViewState.swift */; };
-		5BEF081A1D66338E006BF0C0 /* Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEF08191D66338E006BF0C0 /* Tempo.framework */; };
-		5BEF081B1D66338E006BF0C0 /* Tempo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEF08191D66338E006BF0C0 /* Tempo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF081E1D663598006BF0C0 /* ProductListView.swift */; };
 		5BEF08211D6635B2006BF0C0 /* ProductListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEF08201D6635B2006BF0C0 /* ProductListView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		5BEF081C1D66338E006BF0C0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				5BEF081B1D66338E006BF0C0 /* Tempo.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B259CC61D6630E0001D755F /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +28,7 @@
 		5B259CD51D6630E0001D755F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B2675A11D674B400015A238 /* ListEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEvents.swift; sourceTree = "<group>"; };
 		5B302A8E1D663A8500FA2FFD /* ProductListComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListComponent.swift; sourceTree = "<group>"; };
+		5B518D931F1010E1005C013B /* Tempo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tempo.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TargetCaseStudy-guxhyfunlvwpnrhkcoueuwndjvou/Build/Products/Debug-iphonesimulator/Tempo.framework"; sourceTree = "<group>"; };
 		5BEF08111D6632EC006BF0C0 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		5BEF08131D663304006BF0C0 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5BEF08151D66333C006BF0C0 /* ListViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewState.swift; sourceTree = "<group>"; };
@@ -56,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEF081A1D66338E006BF0C0 /* Tempo.framework in Frameworks */,
+				5B518D941F1010E1005C013B /* Tempo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +55,7 @@
 				5BEF08191D66338E006BF0C0 /* Tempo.framework */,
 				5B259CC81D6630E0001D755F /* ProductViewer */,
 				5B259CC71D6630E0001D755F /* Products */,
+				5B518D921F1010E1005C013B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +78,14 @@
 				5B259CD51D6630E0001D755F /* Info.plist */,
 			);
 			path = ProductViewer;
+			sourceTree = "<group>";
+		};
+		5B518D921F1010E1005C013B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B518D931F1010E1005C013B /* Tempo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5BEF080F1D663283006BF0C0 /* List */ = {
@@ -132,7 +127,6 @@
 				5B259CC21D6630E0001D755F /* Sources */,
 				5B259CC31D6630E0001D755F /* Frameworks */,
 				5B259CC41D6630E0001D755F /* Resources */,
-				5BEF081C1D66338E006BF0C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +149,7 @@
 				TargetAttributes = {
 					5B259CC51D6630E0001D755F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -311,6 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.target.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -323,6 +319,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.target.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

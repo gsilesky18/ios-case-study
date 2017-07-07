@@ -17,6 +17,11 @@
 		5B259CB81D662FDB001D755F /* HarmonyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CB71D662FDB001D755F /* HarmonyColor.swift */; };
 		5B259CBA1D663008001D755F /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CB91D663008001D755F /* UIView+Autolayout.swift */; };
 		5B259CBC1D663027001D755F /* SequenceType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CBB1D663027001D755F /* SequenceType+Extensions.swift */; };
+		5B518D891F100E50005C013B /* HarmonyLayoutSectionAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B518D881F100E50005C013B /* HarmonyLayoutSectionAttributes.swift */; };
+		5B518D8B1F100E89005C013B /* TempoViewStateSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B518D8A1F100E89005C013B /* TempoViewStateSection.swift */; };
+		5B518D8D1F100F2D005C013B /* SupplementaryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B518D8C1F100F2D005C013B /* SupplementaryComponent.swift */; };
+		5B518D8F1F100F8C005C013B /* TempoEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B518D8E1F100F8C005C013B /* TempoEvent.swift */; };
+		5B518D911F100FEC005C013B /* ReusableCollectionViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B518D901F100FEC005C013B /* ReusableCollectionViewContainer.swift */; };
 		5BBBB0691D662C2300F5D57B /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0681D662C2300F5D57B /* Dispatch.swift */; };
 		5BBBB0771D662C3B00F5D57B /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB06A1D662C3B00F5D57B /* CollectionViewAdapter.swift */; };
 		5BBBB0781D662C3B00F5D57B /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB06B1D662C3B00F5D57B /* Component.swift */; };
@@ -27,7 +32,6 @@
 		5BBBB07D1D662C3B00F5D57B /* SectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0701D662C3B00F5D57B /* SectionPresenter.swift */; };
 		5BBBB07E1D662C3B00F5D57B /* TempoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0711D662C3B00F5D57B /* TempoCoordinator.swift */; };
 		5BBBB07F1D662C3B00F5D57B /* TempoFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0721D662C3B00F5D57B /* TempoFocus.swift */; };
-		5BBBB0801D662C3B00F5D57B /* TempoLifecycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0731D662C3B00F5D57B /* TempoLifecycleEvent.swift */; };
 		5BBBB0811D662C3B00F5D57B /* TempoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0741D662C3B00F5D57B /* TempoPresenter.swift */; };
 		5BBBB0821D662C3B00F5D57B /* TempoViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0751D662C3B00F5D57B /* TempoViewState.swift */; };
 		5BBBB0831D662C3B00F5D57B /* TempoViewStateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0761D662C3B00F5D57B /* TempoViewStateItem.swift */; };
@@ -38,7 +42,6 @@
 		5BBBB09B1D662CC000F5D57B /* HarmonyLayoutCellGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB08C1D662CC000F5D57B /* HarmonyLayoutCellGenerator.swift */; };
 		5BBBB09C1D662CC000F5D57B /* HarmonyLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB08D1D662CC000F5D57B /* HarmonyLayoutDelegate.swift */; };
 		5BBBB09D1D662CC000F5D57B /* HarmonyLayoutMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB08E1D662CC000F5D57B /* HarmonyLayoutMargins.swift */; };
-		5BBBB09E1D662CC000F5D57B /* HarmonyLayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB08F1D662CC000F5D57B /* HarmonyLayoutSection.swift */; };
 		5BBBB09F1D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0901D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift */; };
 		5BBBB0A01D662CC000F5D57B /* HarmonyTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0911D662CC000F5D57B /* HarmonyTestCell.swift */; };
 		5BBBB0A21D662CC000F5D57B /* UICollectionView+HarmonyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBB0931D662CC000F5D57B /* UICollectionView+HarmonyLayout.swift */; };
@@ -60,6 +63,11 @@
 		5B259CB71D662FDB001D755F /* HarmonyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyColor.swift; sourceTree = "<group>"; };
 		5B259CB91D663008001D755F /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		5B259CBB1D663027001D755F /* SequenceType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Extensions.swift"; sourceTree = "<group>"; };
+		5B518D881F100E50005C013B /* HarmonyLayoutSectionAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutSectionAttributes.swift; sourceTree = "<group>"; };
+		5B518D8A1F100E89005C013B /* TempoViewStateSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoViewStateSection.swift; sourceTree = "<group>"; };
+		5B518D8C1F100F2D005C013B /* SupplementaryComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryComponent.swift; sourceTree = "<group>"; };
+		5B518D8E1F100F8C005C013B /* TempoEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoEvent.swift; sourceTree = "<group>"; };
+		5B518D901F100FEC005C013B /* ReusableCollectionViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewContainer.swift; sourceTree = "<group>"; };
 		5BBBB0681D662C2300F5D57B /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		5BBBB06A1D662C3B00F5D57B /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
 		5BBBB06B1D662C3B00F5D57B /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -70,7 +78,6 @@
 		5BBBB0701D662C3B00F5D57B /* SectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionPresenter.swift; sourceTree = "<group>"; };
 		5BBBB0711D662C3B00F5D57B /* TempoCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoCoordinator.swift; sourceTree = "<group>"; };
 		5BBBB0721D662C3B00F5D57B /* TempoFocus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoFocus.swift; sourceTree = "<group>"; };
-		5BBBB0731D662C3B00F5D57B /* TempoLifecycleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoLifecycleEvent.swift; sourceTree = "<group>"; };
 		5BBBB0741D662C3B00F5D57B /* TempoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoPresenter.swift; sourceTree = "<group>"; };
 		5BBBB0751D662C3B00F5D57B /* TempoViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoViewState.swift; sourceTree = "<group>"; };
 		5BBBB0761D662C3B00F5D57B /* TempoViewStateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoViewStateItem.swift; sourceTree = "<group>"; };
@@ -81,7 +88,6 @@
 		5BBBB08C1D662CC000F5D57B /* HarmonyLayoutCellGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutCellGenerator.swift; sourceTree = "<group>"; };
 		5BBBB08D1D662CC000F5D57B /* HarmonyLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutDelegate.swift; sourceTree = "<group>"; };
 		5BBBB08E1D662CC000F5D57B /* HarmonyLayoutMargins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutMargins.swift; sourceTree = "<group>"; };
-		5BBBB08F1D662CC000F5D57B /* HarmonyLayoutSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutSection.swift; sourceTree = "<group>"; };
 		5BBBB0901D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyLayoutTileGenerator.swift; sourceTree = "<group>"; };
 		5BBBB0911D662CC000F5D57B /* HarmonyTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyTestCell.swift; sourceTree = "<group>"; };
 		5BBBB0931D662CC000F5D57B /* UICollectionView+HarmonyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+HarmonyLayout.swift"; sourceTree = "<group>"; };
@@ -145,7 +151,7 @@
 				5BBBB08C1D662CC000F5D57B /* HarmonyLayoutCellGenerator.swift */,
 				5BBBB08D1D662CC000F5D57B /* HarmonyLayoutDelegate.swift */,
 				5BBBB08E1D662CC000F5D57B /* HarmonyLayoutMargins.swift */,
-				5BBBB08F1D662CC000F5D57B /* HarmonyLayoutSection.swift */,
+				5B518D881F100E50005C013B /* HarmonyLayoutSectionAttributes.swift */,
 				5BBBB0901D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift */,
 				5BBBB0911D662CC000F5D57B /* HarmonyTestCell.swift */,
 				5BBBB0931D662CC000F5D57B /* UICollectionView+HarmonyLayout.swift */,
@@ -163,11 +169,13 @@
 				5BBBB06E1D662C3B00F5D57B /* EventType.swift */,
 				5BBBB0701D662C3B00F5D57B /* SectionPresenter.swift */,
 				5BBBB0711D662C3B00F5D57B /* TempoCoordinator.swift */,
+				5B518D8E1F100F8C005C013B /* TempoEvent.swift */,
 				5BBBB0721D662C3B00F5D57B /* TempoFocus.swift */,
-				5BBBB0731D662C3B00F5D57B /* TempoLifecycleEvent.swift */,
 				5BBBB0741D662C3B00F5D57B /* TempoPresenter.swift */,
 				5BBBB0751D662C3B00F5D57B /* TempoViewState.swift */,
+				5B518D8A1F100E89005C013B /* TempoViewStateSection.swift */,
 				5BBBB0761D662C3B00F5D57B /* TempoViewStateItem.swift */,
+				5B518D8C1F100F2D005C013B /* SupplementaryComponent.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 				5BBBB0681D662C2300F5D57B /* Dispatch.swift */,
 				5BFB00A91D662B7500AAB3D0 /* Accessibility.swift */,
 				5BFB00A71D662B6100AAB3D0 /* Reusable.swift */,
+				5B518D901F100FEC005C013B /* ReusableCollectionViewContainer.swift */,
 				5BFB00AB1D662B7C00AAB3D0 /* NibLoadedType.swift */,
 				5B259CB91D663008001D755F /* UIView+Autolayout.swift */,
 			);
@@ -234,6 +243,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D9LCY75JDG;
 						DevelopmentTeamName = Target;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -270,22 +280,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B518D8B1F100E89005C013B /* TempoViewStateSection.swift in Sources */,
 				5BBBB0A01D662CC000F5D57B /* HarmonyTestCell.swift in Sources */,
 				5B259CBA1D663008001D755F /* UIView+Autolayout.swift in Sources */,
 				5BBBB0821D662C3B00F5D57B /* TempoViewState.swift in Sources */,
 				5BBBB07C1D662C3B00F5D57B /* HarmonyLayoutComponent.swift in Sources */,
+				5B518D911F100FEC005C013B /* ReusableCollectionViewContainer.swift in Sources */,
 				5BFB00AA1D662B7500AAB3D0 /* Accessibility.swift in Sources */,
 				5BBBB0971D662CC000F5D57B /* HarmonyCellAttributes.swift in Sources */,
 				5B259CAC1D662DF8001D755F /* SinglePixelLine.swift in Sources */,
 				5B259CBC1D663027001D755F /* SequenceType+Extensions.swift in Sources */,
-				5BBBB09E1D662CC000F5D57B /* HarmonyLayoutSection.swift in Sources */,
 				5BBBB09A1D662CC000F5D57B /* HarmonyLayout.swift in Sources */,
 				5BBBB0781D662C3B00F5D57B /* Component.swift in Sources */,
+				5B518D891F100E50005C013B /* HarmonyLayoutSectionAttributes.swift in Sources */,
 				5BBBB0811D662C3B00F5D57B /* TempoPresenter.swift in Sources */,
 				5BBBB09F1D662CC000F5D57B /* HarmonyLayoutTileGenerator.swift in Sources */,
-				5BBBB0801D662C3B00F5D57B /* TempoLifecycleEvent.swift in Sources */,
 				5BBBB07A1D662C3B00F5D57B /* Dispatcher.swift in Sources */,
+				5B518D8D1F100F2D005C013B /* SupplementaryComponent.swift in Sources */,
 				5B259CB81D662FDB001D755F /* HarmonyColor.swift in Sources */,
+				5B518D8F1F100F8C005C013B /* TempoEvent.swift in Sources */,
 				5BBBB07D1D662C3B00F5D57B /* SectionPresenter.swift in Sources */,
 				5BBBB0691D662C2300F5D57B /* Dispatch.swift in Sources */,
 				5BBBB0981D662CC000F5D57B /* HarmonyCellBase.swift in Sources */,

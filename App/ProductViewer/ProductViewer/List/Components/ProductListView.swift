@@ -17,7 +17,7 @@ final class ProductListView: UIView {
 
 extension ProductListView: ReusableNib {
     @nonobjc static let nibName = "ProductListView"
-    @nonobjc static let reuseIdentifier = "ProductListViewIdentifier"
+    @nonobjc static let reuseID = "ProductListViewIdentifier"
 
     @nonobjc func prepareForReuse() {
         

@@ -16,8 +16,18 @@ public struct TempoLifecycleEvent {
     public struct ViewWillAppear: EventType {
         public init() {}
     }
+    
+    public struct ViewWillDisappear: EventType {
+        public init() {}
+    }
 
     public struct ViewDidLoad: EventType {
+        public init() {}
+    }
+}
+
+public struct TempoEvent {
+    public struct CollectionViewUpdatesComplete: EventType {
         public init() {}
     }
 }
