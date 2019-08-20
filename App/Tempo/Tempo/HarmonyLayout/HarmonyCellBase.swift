@@ -173,7 +173,7 @@ open class HarmonyCellBase: UICollectionViewCell {
 
 // MARK: - UICollectionViewCell
 
-public extension HarmonyCellBase {
+extension HarmonyCellBase {
     open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         // This override prevents self-sizing operations from taking place, which slow down complex layouts.
         return layoutAttributes
@@ -283,7 +283,7 @@ public extension HarmonyCellBase {
         didSet {
             switch highlightStyle {
             case .foreground:
-                contentView.bringSubview(toFront: highlightedForegroundImageView)
+                contentView.bringSubviewToFront(highlightedForegroundImageView)
                 highlightedForegroundImageView.isHidden = !isHighlighted
             case .background:
                 highlightedBackgroundImageView?.isHidden = !isHighlighted

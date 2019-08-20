@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct ReusableCollectionViewContainer: ReusableViewContainer {
+public struct ReusableCollectionViewContainer: ReusableViewContainer {
     
     let collectionView: UICollectionView
     
-    init(collectionView: UICollectionView) {
+    public init(collectionView: UICollectionView) {
         self.collectionView = collectionView
     }
     
@@ -28,7 +28,7 @@ struct ReusableCollectionViewContainer: ReusableViewContainer {
         collectionView.registerWrappedReusable(viewType, forSupplementaryViewOfKind: kind)
     }
     
-    func reusableViewItemContainer(fromIndexPath: IndexPath, toIndexPath: IndexPath) -> ReusableViewItemContainer {
+    public func reusableViewItemContainer(fromIndexPath: IndexPath, toIndexPath: IndexPath) -> ReusableViewItemContainer {
         return ReusableCollectionViewItemContainer(fromIndexPath: fromIndexPath, toIndexPath: toIndexPath, collectionView: collectionView)
     }
 }

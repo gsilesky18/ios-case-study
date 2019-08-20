@@ -41,7 +41,7 @@ open class SinglePixelLine: UIView {
     open override func draw(_ rect: CGRect) {
         let lineWidth = HarmonyScreen.onePixel
         let lineInset = lineWidth / 2.0 // half the width of the line should be inside
-        let insetRect = UIEdgeInsetsInsetRect(rect, insets)
+        let insetRect = rect.inset(by: insets)
         
         let context = UIGraphicsGetCurrentContext()
         context?.saveGState()

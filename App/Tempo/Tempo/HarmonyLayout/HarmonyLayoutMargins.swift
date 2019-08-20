@@ -51,5 +51,5 @@ open class HarmonyLayoutMargins: NSObject {
         self.left = left
     }
     
-    open static let HarmonyLayoutMarginsZero = HarmonyLayoutMargins(top: .none, right: .none, bottom: .none, left: .none)
+    public static let HarmonyLayoutMarginsZero = HarmonyLayoutMargins(top: .none, right: .none, bottom: .none, left: .none)
 }

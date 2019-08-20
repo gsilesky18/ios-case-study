@@ -104,7 +104,7 @@ class HarmonyBackdropView: UICollectionReusableView {
 		backgroundColor = .targetFadeAwayGrayColor
 		
 		// A dirty hack to fix an apparent bug with collection views not respecting zIndex.
-		superview?.sendSubview(toBack: self)
+        superview?.sendSubviewToBack(self)
 	}
 }
 

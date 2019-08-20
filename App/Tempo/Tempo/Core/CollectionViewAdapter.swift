@@ -120,7 +120,7 @@ open class CollectionViewAdapter: NSObject {
 			return
 		}
 		
-		let scrollPosition: UICollectionViewScrollPosition
+        let scrollPosition: UICollectionView.ScrollPosition
 		
 		switch focus.position {
 		case .centeredHorizontally:

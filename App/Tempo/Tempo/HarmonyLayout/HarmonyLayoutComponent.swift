@@ -81,7 +81,7 @@ public extension HarmonyLayoutComponent {
 		componentView.setNeedsLayout()
 		componentView.layoutIfNeeded()
 		
-		let fittingSize = componentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        let fittingSize = componentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
 		componentView.removeConstraint(widthConstraint)
 		
 		return fittingSize.height

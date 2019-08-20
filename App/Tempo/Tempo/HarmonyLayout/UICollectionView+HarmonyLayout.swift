@@ -38,7 +38,7 @@ extension UICollectionView {
         
         for groupFrame in groupFrames {
             let maskView = UIView(frame: groupFrame)
-            let activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let activity = UIActivityIndicatorView(style: .gray)
             activity.center = CGPoint(x: maskView.bounds.midX, y: maskView.bounds.midY)
             activity.startAnimating()
             maskView.addSubview(activity)
