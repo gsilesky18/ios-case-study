@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double TempoVersionNumber;
 FOUNDATION_EXPORT const unsigned char TempoVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Tempo/PublicHeader.h>
-
-

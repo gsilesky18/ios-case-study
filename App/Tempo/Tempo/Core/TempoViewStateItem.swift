@@ -68,4 +68,3 @@ public func == (lhs: [TempoViewStateItem]?, rhs: [TempoViewStateItem]?) -> Bool 
         return false
     }
 }
-

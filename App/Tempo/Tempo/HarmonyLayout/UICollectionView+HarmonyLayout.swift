@@ -47,7 +47,7 @@ extension UICollectionView {
             maskView.layer.backgroundColor = UIColor.clear.cgColor
             UIView.animate(withDuration: 0.2, animations: {
                 maskView.layer.backgroundColor = UIColor.targetStarkWhiteColor.withAlphaComponent(0.4).cgColor
-            }) 
+            })
             
             // Store for later so it can be removed
             appliedMaskViews.insert(maskView)
