@@ -69,7 +69,7 @@ public extension UICollectionView {
 	}
 	
     func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
-		guard let cell = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: viewType.reuseID, for: indexPath) as? CollectionViewWrapperCell<T> else {
+		guard let cell = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: viewType.reuseID, for: indexPath) as Any as? CollectionViewWrapperCell<T> else {
 			fatalError("Misconfigured supplementary view type, \(viewType)!")
 		}
 		

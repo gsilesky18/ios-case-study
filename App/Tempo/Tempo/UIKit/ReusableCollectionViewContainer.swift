@@ -58,7 +58,7 @@ private struct ReusableCollectionViewItemContainer: ReusableViewItemContainer {
     }
     
     func visibleWrapper<T: UIView>(_ viewType: T.Type) -> ComponentWrapper? where T: Reusable {
-        guard let cell = collectionView.cellForItem(at: fromIndexPath) as? CollectionViewWrapperCell<T> else {
+        guard let cell = collectionView.cellForItem(at: fromIndexPath) as Any as? CollectionViewWrapperCell<T> else {
             return nil
         }
         
@@ -66,7 +66,7 @@ private struct ReusableCollectionViewItemContainer: ReusableViewItemContainer {
     }
     
     func visibleWrapper<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String) -> ComponentWrapper? where T: Reusable {
-        guard let cell = collectionView.supplementaryView(forElementKind: kind, at: fromIndexPath) as? CollectionViewWrapperCell<T> else {
+        guard let cell = collectionView.supplementaryView(forElementKind: kind, at: fromIndexPath) as Any as? CollectionViewWrapperCell<T> else {
             return nil
         }
         
