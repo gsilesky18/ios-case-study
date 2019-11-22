@@ -12,22 +12,22 @@ import Foundation
 public extension UICollectionView {
 	
 	/// Register a class based cell
-	public func registerReusable(_ cellClass: Reusable.Type) {
+    func registerReusable(_ cellClass: Reusable.Type) {
 		register(cellClass, forCellWithReuseIdentifier: cellClass.reuseID)
 	}
 	
 	/// Register a nib based cell
-	public func registerReusable(_ cellClass: ReusableNib.Type) {
+    func registerReusable(_ cellClass: ReusableNib.Type) {
 		register(UINib(nibName: cellClass.nibName, bundle: Bundle(for: cellClass)), forCellWithReuseIdentifier: cellClass.reuseID)
 	}
 	
 	// Safely dequeue a `Reusable` item
-	public func dequeueReusable<T: UICollectionViewCell>(_ cellType: T.Type, indexPath: IndexPath) -> T where T: Reusable {
+    func dequeueReusable<T: UICollectionViewCell>(_ cellType: T.Type, indexPath: IndexPath) -> T where T: Reusable {
 		return dequeueReusable(cellType, reuseIdentifier: cellType.reuseID, indexPath: indexPath)
 	}
 	
 	// Safely dequeue a `Reusable` item with a custom reuse identifier
-	public func dequeueReusable<T: UICollectionViewCell>(_ cellType: T.Type, reuseIdentifier: String, indexPath: IndexPath) -> T where T: Reusable {
+    func dequeueReusable<T: UICollectionViewCell>(_ cellType: T.Type, reuseIdentifier: String, indexPath: IndexPath) -> T where T: Reusable {
 		guard let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? T else {
 			fatalError("Misconfigured cell type, \(cellType)!")
 		}
@@ -40,25 +40,25 @@ public extension UICollectionView {
 public extension UICollectionView {
 	
 	/// Register wrapped nib based cell
-	public func registerWrappedReusable<T: UIView>(_ viewType: T.Type) where T: Reusable {
+    func registerWrappedReusable<T: UIView>(_ viewType: T.Type) where T: Reusable {
 		registerWrappedReusable(viewType, reuseIdentifier: viewType.reuseID)
 	}
 	
 	/// Register wrapped nib based cell with a custom reuse identifier
-	public func registerWrappedReusable<T: UIView>(_ viewType: T.Type, reuseIdentifier: String) where T: Reusable {
+    func registerWrappedReusable<T: UIView>(_ viewType: T.Type, reuseIdentifier: String) where T: Reusable {
 		register(CollectionViewWrapperCell<T>.self, forCellWithReuseIdentifier: reuseIdentifier)
 	}
 	
 	// Register wrapped nib-based supplementary view
-	public func registerWrappedReusable<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String) where T: Reusable {
+    func registerWrappedReusable<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String) where T: Reusable {
 		register(CollectionViewWrapperCell<T>.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: viewType.reuseID)
 	}
 	
-	public func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
+    func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
 		return dequeueWrappedReusable(viewType, reuseIdentifier: viewType.reuseID, indexPath: indexPath)
 	}
 	
-	public func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, reuseIdentifier: String, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
+    func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, reuseIdentifier: String, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
 		let cell = dequeueReusable(CollectionViewWrapperCell<T>.self, reuseIdentifier: reuseIdentifier, indexPath: indexPath)
 		
 		if cell.reusableView == nil {
@@ -68,7 +68,7 @@ public extension UICollectionView {
 		return cell
 	}
 	
-	public func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
+    func dequeueWrappedReusable<T: UIView>(_ viewType: T.Type, forSupplementaryViewOfKind kind: String, indexPath: IndexPath) -> CollectionViewWrapperCell<T> where T: Reusable, T: Creatable {
 		guard let cell = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: viewType.reuseID, for: indexPath) as? CollectionViewWrapperCell<T> else {
 			fatalError("Misconfigured supplementary view type, \(viewType)!")
 		}

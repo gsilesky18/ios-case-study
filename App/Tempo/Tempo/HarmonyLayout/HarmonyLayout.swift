@@ -297,11 +297,11 @@ public extension HarmonyLayout {
 		}
 	}
 	
-	override public var collectionViewContentSize : CGSize {
+    override var collectionViewContentSize : CGSize {
 		return cachedContentSize
 	}
 	
-	override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
 		var intersection = [UICollectionViewLayoutAttributes]()
 		
 		for attributes in currentAttributes.values {
@@ -332,23 +332,23 @@ public extension HarmonyLayout {
 		cachedContentSize = CGSize.zero
 	}
 	
-	override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		return currentAttributes[indexPath]
 	}
 	
-	override public func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		return backdropAttributes
 	}
 	
-	override public func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		return sectionHeaderAttributes[indexPath]
 	}
 	
-	override public func finalLayoutAttributesForDisappearingDecorationElement(ofKind elementKind: String, at decorationIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func finalLayoutAttributesForDisappearingDecorationElement(ofKind elementKind: String, at decorationIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		return backdropAttributes
 	}
 	
-	override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
 		let oldBounds = collectionView?.bounds ?? CGRect.zero
 		let sizeChanged = !oldBounds.size.equalTo(newBounds.size)
 		
