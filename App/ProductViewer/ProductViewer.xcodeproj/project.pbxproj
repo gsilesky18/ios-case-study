@@ -12,12 +12,12 @@
 		5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */; };
 		5B2675A21D674B400015A238 /* ListEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2675A11D674B400015A238 /* ListEvents.swift */; };
 		5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B302A8E1D663A8500FA2FFD /* ProductListComponent.swift */; };
-		5B518D941F1010E1005C013B /* Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B518D931F1010E1005C013B /* Tempo.framework */; };
 		5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08111D6632EC006BF0C0 /* ListCoordinator.swift */; };
 		5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08131D663304006BF0C0 /* ListViewController.swift */; };
 		5BEF08161D66333C006BF0C0 /* ListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF08151D66333C006BF0C0 /* ListViewState.swift */; };
 		5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF081E1D663598006BF0C0 /* ProductListView.swift */; };
 		5BEF08211D6635B2006BF0C0 /* ProductListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEF08201D6635B2006BF0C0 /* ProductListView.xib */; };
+		C5C0528B23886699002A586D /* Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C0528723886616002A586D /* Tempo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +28,12 @@
 		5B259CD51D6630E0001D755F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B2675A11D674B400015A238 /* ListEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEvents.swift; sourceTree = "<group>"; };
 		5B302A8E1D663A8500FA2FFD /* ProductListComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListComponent.swift; sourceTree = "<group>"; };
-		5B518D931F1010E1005C013B /* Tempo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tempo.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TargetCaseStudy-guxhyfunlvwpnrhkcoueuwndjvou/Build/Products/Debug-iphonesimulator/Tempo.framework"; sourceTree = "<group>"; };
 		5BEF08111D6632EC006BF0C0 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		5BEF08131D663304006BF0C0 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5BEF08151D66333C006BF0C0 /* ListViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewState.swift; sourceTree = "<group>"; };
-		5BEF08191D66338E006BF0C0 /* Tempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Tempo.framework; path = "/Users/z013sbd/Library/Developer/Xcode/DerivedData/TargetCaseStudy-agdipiwuywmqhicruecwwhjdwcjb/Build/Products/Debug-iphonesimulator/Tempo.framework"; sourceTree = "<absolute>"; };
 		5BEF081E1D663598006BF0C0 /* ProductListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		5BEF08201D6635B2006BF0C0 /* ProductListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductListView.xib; sourceTree = "<group>"; };
+		C5C0528723886616002A586D /* Tempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B518D941F1010E1005C013B /* Tempo.framework in Frameworks */,
+				C5C0528B23886699002A586D /* Tempo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +51,6 @@
 		5B259CBD1D6630E0001D755F = {
 			isa = PBXGroup;
 			children = (
-				5BEF08191D66338E006BF0C0 /* Tempo.framework */,
 				5B259CC81D6630E0001D755F /* ProductViewer */,
 				5B259CC71D6630E0001D755F /* Products */,
 				5B518D921F1010E1005C013B /* Frameworks */,
@@ -83,7 +81,7 @@
 		5B518D921F1010E1005C013B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B518D931F1010E1005C013B /* Tempo.framework */,
+				C5C0528723886616002A586D /* Tempo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
