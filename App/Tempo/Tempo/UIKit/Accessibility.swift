@@ -2,18 +2,17 @@
 //  Accessibility.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 3/16/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 
 import UIKit
 
 @objc open class Accessibility : NSObject {
-    open static func announce(_ announcement: String) {
-        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, announcement)
+    public static func announce(_ announcement: String) {
+        UIAccessibility.post(notification: .announcement, argument: announcement)
     }
 
-    open static func announce(_ announcement: String, afterDelay delay: TimeInterval) {
+    public static func announce(_ announcement: String, afterDelay delay: TimeInterval) {
         after(delay) {
             announce(announcement)
         }
@@ -24,28 +23,28 @@ import UIKit
      *
      *  - Parameter announcement: An optional announcement to coincide with the layout change.
      */
-    open static func postLayoutChanged(_ announcement: String? = nil) {
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, announcement);
+    public static func postLayoutChanged(_ announcement: String? = nil) {
+        UIAccessibility.post(notification: .layoutChanged, argument: announcement);
     }
 
-    open static func announceScreenChanged(andFocusView view: UIView) {
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, view)
+    public static func announceScreenChanged(andFocusView view: UIView) {
+        UIAccessibility.post(notification: .screenChanged, argument: view)
     }
 
-    open static func announceScreenChanged(andSpeakAnnouncement announcement: String) {
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, announcement)
+    public static func announceScreenChanged(andSpeakAnnouncement announcement: String) {
+        UIAccessibility.post(notification: .screenChanged, argument: announcement)
     }
     
-    open static func announceScreenChanged(andSpeakAnnouncement announcement: String, afterDelay delay: TimeInterval) {
+    public static func announceScreenChanged(andSpeakAnnouncement announcement: String, afterDelay delay: TimeInterval) {
         after(delay) {
-            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, announcement)
+            UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged, argument: announcement)
         }
     }
 }
 
 public extension UIView {
     func focusAccessibility() {
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, self);
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: self);
     }
 
     func focusAccessibility(afterDelay delay: TimeInterval) {

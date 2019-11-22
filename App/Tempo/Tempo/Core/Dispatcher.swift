@@ -2,7 +2,6 @@
 //  Dispatcher.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 11/10/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 
@@ -30,14 +29,14 @@ public final class Dispatcher {
 
     // MARK: Notification
 
-	public func triggerEvent<T: EventType>(_ event: T) {
-		guard let observers = observers[type(of: event).key] else { return }
-		
-		for observer in observers.allObjects {
-			guard let observer = observer as? Observer<T> else { continue }
-			observer.notify(event)
-		}
-	}
+    public func triggerEvent<T: EventType>(_ event: T) {
+        guard let observers = observers[type(of: event).key] else { return }
+        
+        for observer in observers.allObjects {
+            guard let observer = observer as? Observer<T> else { continue }
+            observer.notify(event)
+        }
+    }
 }
 
 // MARK: Observer Protocols

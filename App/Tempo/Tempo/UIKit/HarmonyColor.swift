@@ -1,3 +1,9 @@
+//
+//  HarmonyColor.swift
+//  HarmonyKit
+//
+//  Copyright © 2015 Target. All rights reserved.
+//
 
 import UIKit
 

@@ -1,5 +1,11 @@
-import UIKit
+//
+//  HarmonyTestCell.swift
+//  HarmonyKit
+//
+//  Copyright © 2016 Target. All rights reserved.
+//
 
+import UIKit
 
 open class HarmonyTestCell: HarmonyCellBase {
 

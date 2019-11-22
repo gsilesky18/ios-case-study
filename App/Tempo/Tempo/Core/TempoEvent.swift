@@ -2,7 +2,6 @@
 //  TempoLifecycleEvent
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 2/25/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

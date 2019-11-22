@@ -2,7 +2,6 @@
 //  UICollectionView+HarmonyLayout.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 1/20/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 
@@ -38,7 +37,7 @@ extension UICollectionView {
         
         for groupFrame in groupFrames {
             let maskView = UIView(frame: groupFrame)
-            let activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let activity = UIActivityIndicatorView(style: .gray)
             activity.center = CGPoint(x: maskView.bounds.midX, y: maskView.bounds.midY)
             activity.startAnimating()
             maskView.addSubview(activity)
@@ -47,7 +46,7 @@ extension UICollectionView {
             maskView.layer.backgroundColor = UIColor.clear.cgColor
             UIView.animate(withDuration: 0.2, animations: {
                 maskView.layer.backgroundColor = UIColor.targetStarkWhiteColor.withAlphaComponent(0.4).cgColor
-            }) 
+            })
             
             // Store for later so it can be removed
             appliedMaskViews.insert(maskView)

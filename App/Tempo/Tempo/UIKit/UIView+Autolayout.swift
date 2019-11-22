@@ -2,17 +2,16 @@
 //  UIView+Autolayout.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 11/24/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 
 import UIKit
 
 /// All-to-common utility for pinning a subviews edges to it's parentview edges.
-public extension UIView {
+extension UIView {
     public func pinSubview(_ subview: UIView) {
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview": subview]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[subview]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview": subview]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["subview": subview]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[subview]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["subview": subview]))
     }
     
     public func addAndPinSubview(_ subview: UIView) {
@@ -26,8 +25,8 @@ public extension UIView {
     }
     
     func pinSubviewToMargins(_ subview: UIView) {
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[subview]-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview": subview]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[subview]-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview": subview]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[subview]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["subview": subview]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[subview]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["subview": subview]))
     }
     
     func centerSubview(_ subview: UIView) {
@@ -48,8 +47,8 @@ extension UIViewController {
     public func pinRootSubview(_ subview: UIView) {
         let views: [String: AnyObject] = ["subview": subview, "topGuide": topLayoutGuide, "bottomGuide": bottomLayoutGuide]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views:views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[topGuide][subview][bottomGuide]|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views:views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[topGuide][subview][bottomGuide]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
     
     public func addAndPinRootSubview(_ subview: UIView) {
@@ -57,4 +56,3 @@ extension UIViewController {
         pinRootSubview(subview)
     }
 }
-
