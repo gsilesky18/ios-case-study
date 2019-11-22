@@ -2,7 +2,6 @@
 //  Reusable.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 11/17/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

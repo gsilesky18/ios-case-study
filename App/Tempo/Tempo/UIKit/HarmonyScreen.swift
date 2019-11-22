@@ -2,7 +2,6 @@
 //  HarmonyScreen.swift
 //  HarmonyKit
 //
-//  Created by Erik Kerber on 11/10/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

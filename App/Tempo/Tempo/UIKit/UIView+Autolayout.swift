@@ -2,7 +2,6 @@
 //  UIView+Autolayout.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 11/24/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

@@ -2,7 +2,6 @@
 //  TempoCoordinator.swift
 //  HarmonyKit
 //
-//  Created by Kevin.Onken on 2/18/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

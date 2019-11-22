@@ -2,7 +2,6 @@
 //  ReusableCollectionViewContainer.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 2/20/17.
 //  Copyright © 2017 Target. All rights reserved.
 //
 

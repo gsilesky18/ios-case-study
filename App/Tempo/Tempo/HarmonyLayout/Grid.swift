@@ -2,7 +2,6 @@
 //  Grid.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 5/6/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

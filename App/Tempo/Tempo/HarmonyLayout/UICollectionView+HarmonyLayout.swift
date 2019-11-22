@@ -2,7 +2,6 @@
 //  UICollectionView+HarmonyLayout.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 1/20/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

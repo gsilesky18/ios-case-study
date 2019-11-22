@@ -2,7 +2,6 @@
 //  Dispatch.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 3/16/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

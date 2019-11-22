@@ -2,7 +2,6 @@
 //  SectionPresenter.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 11/9/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

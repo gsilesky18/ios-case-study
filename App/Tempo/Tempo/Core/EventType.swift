@@ -2,7 +2,6 @@
 //  EventType.swift
 //  HarmonyKit
 //
-//  Created by Ryan.Sander on 1/19/16.
 //  Copyright © 2016 Target. All rights reserved.
 //
 

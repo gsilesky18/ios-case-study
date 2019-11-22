@@ -2,7 +2,6 @@
 //  Component.swift
 //  HarmonyKit
 //
-//  Created by Ryan.Sander on 11/4/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

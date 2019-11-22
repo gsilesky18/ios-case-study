@@ -2,7 +2,6 @@
 //  TempoPresenter.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 11/6/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

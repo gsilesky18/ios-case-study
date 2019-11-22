@@ -2,7 +2,6 @@
 //  SinglePixelLine.swift
 //  HarmonyKit
 //
-//  Created by Logan.B.Johnson on 11/10/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

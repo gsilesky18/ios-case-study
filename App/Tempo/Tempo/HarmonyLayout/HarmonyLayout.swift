@@ -2,7 +2,6 @@
 //  HarmonyLayout.swift
 //  Harmony
 //
-//  Created by Samuel Kirchmeier on 4/10/15.
 //  Copyright (c) 2015 Target. All rights reserved.
 //
 

@@ -2,7 +2,6 @@
 //  NibView.swift
 //  HarmonyKit
 //
-//  Created by Erik.Kerber on 12/3/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 

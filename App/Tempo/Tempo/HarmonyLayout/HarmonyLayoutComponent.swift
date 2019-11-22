@@ -2,7 +2,6 @@
 //  HarmonyLayoutComponent.swift
 //  HarmonyKit
 //
-//  Created by Adam May on 11/16/15.
 //  Copyright © 2015 Target. All rights reserved.
 //
 
