@@ -26,7 +26,7 @@ class ListViewController: UIViewController {
         harmonyLayout.defaultSectionMargins = HarmonyLayoutMargins(top: .narrow, right: .none, bottom: .none, left: .none)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: harmonyLayout)
-        collectionView.backgroundColor = .targetFadeAwayGrayColor
+        collectionView.backgroundColor = .targetStarkWhiteColor
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
         

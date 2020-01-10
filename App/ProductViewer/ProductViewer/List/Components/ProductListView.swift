@@ -12,6 +12,10 @@ final class ProductListView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productImage: UIImageView!
+    
+    @IBOutlet weak var spacerView: SinglePixelLine!
+    @IBOutlet weak var aisleView: UIView!
+    @IBOutlet weak var aisleLabel: UILabel!
 }
 
 extension ProductListView: ReusableNib {

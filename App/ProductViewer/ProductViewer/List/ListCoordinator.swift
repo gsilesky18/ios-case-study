@@ -59,7 +59,7 @@ class ListCoordinator: TempoCoordinator {
     
     func updateState() {
         viewState.listItems = (1..<10).map { index in
-            ListItemViewState(title: "Puppies!!!", price: "$9.99", image: UIImage(named: "\(index)"))
+            ListItemViewState(title: "Women's Ultimate Scoop Tee", price: "$9.99", image: UIImage(named: "\(index)"), aisle: "G33")
         }
     }
 }
