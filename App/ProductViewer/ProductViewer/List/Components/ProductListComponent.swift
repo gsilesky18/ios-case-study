@@ -6,6 +6,7 @@
 //
 
 import Tempo
+import Kingfisher
 
 struct ProductListComponent: Component {
     var dispatcher: Dispatcher?
@@ -26,8 +27,8 @@ struct ProductListComponent: Component {
     func configureView(_ view: ProductListView, item: ListItemViewState) {
         view.titleLabel.text = item.title
         view.priceLabel.text = item.price
-        //TODO: Add kingfisher to load image
-        view.productImage.image = UIImage(named: "\(1)")
+        view.productImage.kf.indicatorType = .activity
+        view.productImage.kf.setImage(with: item.imageUrl)
         view.aisleLabel.text = item.aisle
     }
     

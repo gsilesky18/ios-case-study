@@ -20,7 +20,7 @@ struct ListViewState: TempoViewState, TempoSectionedViewState {
 struct ListItemViewState: TempoViewStateItem, Equatable {
     let title: String
     let price: String
-    let imageUrl: String
+    let imageUrl: URL?
     let aisle: String
 }
 

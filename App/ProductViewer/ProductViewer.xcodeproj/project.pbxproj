@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,7 @@
 		D78CE0B723CA30DD00645624 /* NetworkingStatusOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78CE0B323CA30DD00645624 /* NetworkingStatusOverlayView.xib */; };
 		D78CE0B923CA381200645624 /* NetworkingStatusOverlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0B823CA381200645624 /* NetworkingStatusOverlayPresenter.swift */; };
 		D78CE0BB23CA503C00645624 /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0BA23CA503C00645624 /* RequestState.swift */; };
+		D78CE0BE23CA526C00645624 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D78CE0BD23CA526C00645624 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78CE0BE23CA526C00645624 /* Kingfisher in Frameworks */,
 				C5C0528B23886699002A586D /* Tempo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +239,9 @@
 			dependencies = (
 			);
 			name = ProductViewer;
+			packageProductDependencies = (
+				D78CE0BD23CA526C00645624 /* Kingfisher */,
+			);
 			productName = ProductViewer;
 			productReference = 5B259CC61D6630E0001D755F /* ProductViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -275,7 +280,6 @@
 					};
 					D78CE09123C9377F00645624 = {
 						CreatedOnToolsVersion = 11.3;
-						ProvisioningStyle = Automatic;
 						TestTargetID = 5B259CC51D6630E0001D755F;
 					};
 				};
@@ -289,6 +293,9 @@
 				Base,
 			);
 			mainGroup = 5B259CBD1D6630E0001D755F;
+			packageReferences = (
+				D78CE0BC23CA526C00645624 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 5B259CC71D6630E0001D755F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -490,7 +497,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProductViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.target.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProductViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.target.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,7 +540,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProductViewerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.ProductViewerTests;
@@ -552,7 +569,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProductViewerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.ProductViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -594,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D78CE0BC23CA526C00645624 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D78CE0BD23CA526C00645624 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D78CE0BC23CA526C00645624 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B259CBE1D6630E0001D755F /* Project object */;
 }

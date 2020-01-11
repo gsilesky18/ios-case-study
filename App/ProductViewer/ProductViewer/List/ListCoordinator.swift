@@ -53,7 +53,7 @@ class ListCoordinator: TempoCoordinator {
     var products: [Product] = [] {
         didSet{
             viewState.listItems = products.map({ product in
-                ListItemViewState(title: product.title, price: product.salePrice ?? product.price, imageUrl: product.image, aisle: product.aisle.uppercased())
+                ListItemViewState(title: product.title, price: product.salePrice ?? product.price, imageUrl: URL(string: product.image), aisle: product.aisle.uppercased())
             })
         }
     }
