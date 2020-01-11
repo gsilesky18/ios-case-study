@@ -39,10 +39,20 @@ class ListCoordinator: TempoCoordinator {
         return ListViewController.viewControllerFor(coordinator: self)
     }()
     
+    let productLoader: ProductLoader
+    var products: [Product] = [] {
+        didSet{
+            viewState.listItems = products.map({ product in
+                ListItemViewState(title: product.title, price: product.salePrice ?? product.price, imageUrl: product.image, aisle: product.aisle.uppercased())
+            })
+        }
+    }
+    
     // MARK: Init
     
     required init() {
         viewState = ListViewState(listItems: [])
+        productLoader = ProductLoader(manager: NetworkManager())
         updateState()
         registerListeners()
     }
@@ -58,8 +68,15 @@ class ListCoordinator: TempoCoordinator {
     }
     
     func updateState() {
-        viewState.listItems = (1..<10).map { index in
-            ListItemViewState(title: "Women's Ultimate Scoop Tee", price: "$9.99", image: UIImage(named: "\(index)"), aisle: "G33")
+        productLoader.fetchProducts { [weak self] (result) in
+            switch result {
+            case .success(let products):
+                self?.products = products
+                break
+            case .failure(let error):
+                //TODO: Display view for error
+                break
+            }
         }
     }
 }

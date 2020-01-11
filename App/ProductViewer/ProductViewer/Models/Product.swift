@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Product: Codable {
+struct Product: Codable, Equatable {
     let _id: String
     let aisle: String
     let description: String
     let guid: String
     let image: String
     let index: Int
-    let price: Double
-    let salePrice: Double?
+    let price: String
+    let salePrice: String?
     let title: String
 }

@@ -21,13 +21,13 @@ struct ProductListComponent: Component {
         view.layer.borderWidth = 0.75
         view.productImage.layer.cornerRadius = 8.0
         view.productImage.clipsToBounds = true
-        //view.aisleLabel.textColor = .targetBullseyeRedColor
     }
     
     func configureView(_ view: ProductListView, item: ListItemViewState) {
         view.titleLabel.text = item.title
         view.priceLabel.text = item.price
-        view.productImage.image = item.image
+        //TODO: Add kingfisher to load image
+        view.productImage.image = UIImage(named: "\(1)")
         view.aisleLabel.text = item.aisle
     }
     
