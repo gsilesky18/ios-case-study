@@ -28,6 +28,11 @@
 		D78CE0AA23CA14D700645624 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0A923CA14D700645624 /* NetworkSessionMock.swift */; };
 		D78CE0AC23CA1AF400645624 /* ProductLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0AB23CA1AF400645624 /* ProductLoader.swift */; };
 		D78CE0AE23CA20DE00645624 /* ProductLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0AD23CA20DE00645624 /* ProductLoaderTests.swift */; };
+		D78CE0B423CA30DD00645624 /* NetworkingStatusOverlayViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0B023CA30DD00645624 /* NetworkingStatusOverlayViewState.swift */; };
+		D78CE0B523CA30DD00645624 /* NetworkingStatusOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0B123CA30DD00645624 /* NetworkingStatusOverlayView.swift */; };
+		D78CE0B723CA30DD00645624 /* NetworkingStatusOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78CE0B323CA30DD00645624 /* NetworkingStatusOverlayView.xib */; };
+		D78CE0B923CA381200645624 /* NetworkingStatusOverlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0B823CA381200645624 /* NetworkingStatusOverlayPresenter.swift */; };
+		D78CE0BB23CA503C00645624 /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CE0BA23CA503C00645624 /* RequestState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		D78CE0A923CA14D700645624 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
 		D78CE0AB23CA1AF400645624 /* ProductLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLoader.swift; sourceTree = "<group>"; };
 		D78CE0AD23CA20DE00645624 /* ProductLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLoaderTests.swift; sourceTree = "<group>"; };
+		D78CE0B023CA30DD00645624 /* NetworkingStatusOverlayViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingStatusOverlayViewState.swift; sourceTree = "<group>"; };
+		D78CE0B123CA30DD00645624 /* NetworkingStatusOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingStatusOverlayView.swift; sourceTree = "<group>"; };
+		D78CE0B323CA30DD00645624 /* NetworkingStatusOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkingStatusOverlayView.xib; sourceTree = "<group>"; };
+		D78CE0B823CA381200645624 /* NetworkingStatusOverlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingStatusOverlayPresenter.swift; sourceTree = "<group>"; };
+		D78CE0BA23CA503C00645624 /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,7 @@
 				5B259CD01D6630E0001D755F /* Assets.xcassets */,
 				5B259CD51D6630E0001D755F /* Info.plist */,
 				5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */,
+				D78CE0AF23CA309000645624 /* CommonComponents */,
 				D78CE08823C7FD7C00645624 /* Detail */,
 				5BEF080F1D663283006BF0C0 /* List */,
 				D78CE08923C7FD8700645624 /* Models */,
@@ -163,6 +174,7 @@
 			children = (
 				D78CE08A23C7FDA100645624 /* Products.swift */,
 				D78CE08C23C7FDB400645624 /* Product.swift */,
+				D78CE0BA23CA503C00645624 /* RequestState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +208,17 @@
 				D78CE0AD23CA20DE00645624 /* ProductLoaderTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		D78CE0AF23CA309000645624 /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D78CE0B123CA30DD00645624 /* NetworkingStatusOverlayView.swift */,
+				D78CE0B323CA30DD00645624 /* NetworkingStatusOverlayView.xib */,
+				D78CE0B023CA30DD00645624 /* NetworkingStatusOverlayViewState.swift */,
+				D78CE0B823CA381200645624 /* NetworkingStatusOverlayPresenter.swift */,
+			);
+			path = CommonComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */,
+				D78CE0B723CA30DD00645624 /* NetworkingStatusOverlayView.xib in Resources */,
 				5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */,
 				5BEF08211D6635B2006BF0C0 /* ProductListView.xib in Resources */,
 			);
@@ -306,6 +330,7 @@
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
 				D78CE08D23C7FDB400645624 /* Product.swift in Sources */,
 				D78CE0A123C9430A00645624 /* NetworkManager.swift in Sources */,
+				D78CE0B423CA30DD00645624 /* NetworkingStatusOverlayViewState.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */,
 				5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */,
 				5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */,
@@ -315,6 +340,9 @@
 				D78CE0A523CA12FF00645624 /* Result+Decoder.swift in Sources */,
 				5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */,
 				5B2675A21D674B400015A238 /* ListEvents.swift in Sources */,
+				D78CE0BB23CA503C00645624 /* RequestState.swift in Sources */,
+				D78CE0B523CA30DD00645624 /* NetworkingStatusOverlayView.swift in Sources */,
+				D78CE0B923CA381200645624 /* NetworkingStatusOverlayPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

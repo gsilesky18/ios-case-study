@@ -33,23 +33,30 @@ class ListViewController: UIViewController {
         return collectionView
     }()
     
+    lazy var networkingStatusOverlayView: NetworkingStatusOverlayView = {
+        let view = NetworkingStatusOverlayView.loadFromNib()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addAndPinSubview(collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
+        view.addAndPinSubview(networkingStatusOverlayView)
         
-        title = "checkout"
+        title = "Deals"
         
         let components: [ComponentType] = [
             ProductListComponent()
         ]
-        
         let componentProvider = ComponentProvider(components: components, dispatcher: coordinator.dispatcher)
         let collectionViewAdapter = CollectionViewAdapter(collectionView: collectionView, componentProvider: componentProvider)
-        
+
         coordinator.presenters = [
             SectionPresenter(adapter: collectionViewAdapter),
+            NetworkingStatusOverlayPresenter(networkingStatusOverlayView: networkingStatusOverlayView)
         ]
 
     }

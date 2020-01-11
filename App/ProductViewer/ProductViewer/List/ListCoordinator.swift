@@ -27,9 +27,19 @@ class ListCoordinator: TempoCoordinator {
         }
     }
     
+    fileprivate var networkingStatusOverlayViewState: NetworkingStatusOverlayViewState{
+        didSet {
+            updateUI()
+        }
+    }
+    
     fileprivate func updateUI() {
         for presenter in presenters {
-            presenter.present(viewState)
+            if presenter is SectionPresenter{
+                presenter.present(viewState)
+            }else if presenter is NetworkingStatusOverlayPresenter {
+                presenter.present(networkingStatusOverlayViewState)
+            }
         }
     }
     
@@ -52,6 +62,7 @@ class ListCoordinator: TempoCoordinator {
     
     required init() {
         viewState = ListViewState(listItems: [])
+        networkingStatusOverlayViewState = NetworkingStatusOverlayViewState(requestState: .pending)
         productLoader = ProductLoader(manager: NetworkManager())
         updateState()
         registerListeners()
@@ -68,15 +79,22 @@ class ListCoordinator: TempoCoordinator {
     }
     
     func updateState() {
-        productLoader.fetchProducts { [weak self] (result) in
-            switch result {
-            case .success(let products):
-                self?.products = products
-                break
-            case .failure(let error):
-                //TODO: Display view for error
-                break
+        DispatchQueue.main.async { [weak self] in
+            self?.networkingStatusOverlayViewState.requestState = .inProgress
+            self?.productLoader.fetchProducts { [weak self] (result) in
+                DispatchQueue.main.async { [weak self] in
+                    switch result {
+                    case .success(let products):
+                        self?.products = products
+                        self?.networkingStatusOverlayViewState.requestState = .successful
+                        break
+                    case .failure(let error):
+                        self?.networkingStatusOverlayViewState.requestState = .failed(error.localizedDescription)
+                        break
+                    }
+                }
             }
         }
+
     }
 }
