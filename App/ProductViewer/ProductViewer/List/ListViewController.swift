@@ -22,8 +22,8 @@ class ListViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let harmonyLayout = HarmonyLayout()
         
-        harmonyLayout.collectionViewMargins = HarmonyLayoutMargins(top: .narrow, right: .none, bottom: .narrow, left: .none)
-        harmonyLayout.defaultSectionMargins = HarmonyLayoutMargins(top: .narrow, right: .none, bottom: .none, left: .none)
+        harmonyLayout.collectionViewMargins = HarmonyLayoutMargins(top: .none, right: .quarter, bottom: .none, left: .quarter)
+        harmonyLayout.defaultSectionMargins = HarmonyLayoutMargins(top: .quarter, right: .none, bottom: .half, left: .none)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: harmonyLayout)
         collectionView.backgroundColor = .targetStarkWhiteColor

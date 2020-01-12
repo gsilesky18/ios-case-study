@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
         lazy var collectionView: UICollectionView = {
         let harmonyLayout = HarmonyLayout()
         
-        harmonyLayout.collectionViewMargins = HarmonyLayoutMargins(top: .none, right: .none, bottom: .none, left: .none)
+        harmonyLayout.collectionViewMargins = HarmonyLayoutMargins(top: .none, right: .quarter, bottom: .none, left: .quarter)
         harmonyLayout.defaultSectionMargins = HarmonyLayoutMargins(top: .none, right: .none, bottom: .none, left: .none)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: harmonyLayout)

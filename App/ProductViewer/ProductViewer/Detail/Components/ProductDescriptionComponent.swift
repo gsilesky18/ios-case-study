@@ -20,7 +20,7 @@ struct ProductDescriptionComponent: Component {
 extension ProductDescriptionComponent: HarmonyLayoutComponent {
     func heightForLayout(_ layout: HarmonyLayout, item: TempoViewStateItem, width: CGFloat) -> CGFloat {
         if let descriptionItem = item as? ProductDescriptionViewState {
-            return descriptionItem.description.calculateHeight(font: descriptionFont, width: width - 8)
+            return descriptionItem.description.calculateHeight(font: descriptionFont, width: width) + 8
         }
         return 214
     }

@@ -12,7 +12,6 @@ struct ProductListComponent: Component {
     var dispatcher: Dispatcher?
 
     func prepareView(_ view: ProductListView, item: ListItemViewState) {
-        // Called on first view or ProductListView
         view.aisleView.layer.cornerRadius = 20.0
         view.aisleView.layer.borderColor = HarmonyColor.targetStrokeGrayColor.cgColor
         view.aisleView.layer.borderWidth = 1.0
@@ -40,9 +39,5 @@ struct ProductListComponent: Component {
 extension ProductListComponent: HarmonyLayoutComponent {
     func heightForLayout(_ layout: HarmonyLayout, item: TempoViewStateItem, width: CGFloat) -> CGFloat {
         return 150.0
-    }
-    
-    func sectionMarginsForLayout(_ layout: HarmonyLayout) -> HarmonyLayoutMargins {
-        return HarmonyLayoutMargins(top: .half, right: .quarter, bottom: .half, left: .none)
     }
 }

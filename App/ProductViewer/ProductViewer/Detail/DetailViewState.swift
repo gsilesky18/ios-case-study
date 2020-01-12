@@ -10,7 +10,6 @@ import Tempo
 
 /// List view state
 struct DetailViewState: TempoViewState, TempoSectionedViewState {
-    //var listItems: [TempoViewStateItem]
     var image: TempoViewStateItem
     var price: TempoViewStateItem
     var description: TempoViewStateItem
@@ -21,13 +20,11 @@ struct DetailViewState: TempoViewState, TempoSectionedViewState {
 }
 
 struct ProductImageViewState: TempoViewStateItem, Equatable {
-    let identifier: String
     let imageUrl: URL?
 }
 
 func ==(lhs: ProductImageViewState, rhs: ProductImageViewState) -> Bool {
-    return lhs.identifier == rhs.identifier
-        && lhs.imageUrl == rhs.imageUrl
+    return lhs.imageUrl == rhs.imageUrl
 }
 
 struct ProductPriceViewState: TempoViewStateItem, Equatable {

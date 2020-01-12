@@ -12,6 +12,8 @@ class ProductAddToComponent: Component {
     var dispatcher: Dispatcher?
 
     func prepareView(_ view: ProductAddToView, item: ProductAddToViewState) {
+        view.addToCartButton.layer.cornerRadius = 2.0
+        view.addToListButton.layer.cornerRadius = 2.0
         view.addToCartButton.addTarget(self, action: #selector(AddToCart), for: .touchUpInside)
         view.addToListButton.addTarget(self, action: #selector(AddToList), for: .touchUpInside)
     }
