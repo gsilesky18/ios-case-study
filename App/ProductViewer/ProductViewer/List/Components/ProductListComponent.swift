@@ -15,12 +15,13 @@ struct ProductListComponent: Component {
         view.aisleView.layer.cornerRadius = 20.0
         view.aisleView.layer.borderColor = HarmonyColor.targetStrokeGrayColor.cgColor
         view.aisleView.layer.borderWidth = 1.0
-        view.spacerView.color = HarmonyColor.targetStrokeGrayColor
+        view.spacerView.color = .targetStrokeGrayColor
         view.layer.cornerRadius = 8.0
         view.layer.borderColor = HarmonyColor.targetStrokeGrayColor.cgColor
         view.layer.borderWidth = 0.75
         view.productImage.layer.cornerRadius = 8.0
         view.productImage.clipsToBounds = true
+        view.aisleLabel.textColor = .targetBullseyeRedColor
     }
     
     func configureView(_ view: ProductListView, item: ListItemViewState) {

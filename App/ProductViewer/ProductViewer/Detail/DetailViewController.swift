@@ -40,8 +40,6 @@ class DetailViewController: UIViewController {
         view.addAndPinSubview(collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         
-        title = "Detail"
-        
         let components: [ComponentType] = [
             ProductImageComponent(),
             ProductPriceComponent(),

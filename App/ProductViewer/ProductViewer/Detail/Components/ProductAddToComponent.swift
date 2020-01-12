@@ -14,8 +14,11 @@ class ProductAddToComponent: Component {
     func prepareView(_ view: ProductAddToView, item: ProductAddToViewState) {
         view.addToCartButton.layer.cornerRadius = 2.0
         view.addToListButton.layer.cornerRadius = 2.0
+        view.addToCartButton.backgroundColor = .targetBullseyeRedColor
+        view.addToListButton.backgroundColor = .targetStrokeGrayColor
         view.addToCartButton.addTarget(self, action: #selector(AddToCart), for: .touchUpInside)
         view.addToListButton.addTarget(self, action: #selector(AddToList), for: .touchUpInside)
+        
     }
     
     func configureView(_ view: ProductAddToView, item: ProductAddToViewState) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Tempo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: listCoordinator.viewController)
         window?.makeKeyAndVisible()
         
+        UINavigationBar.appearance().barTintColor = .targetStarkWhiteColor
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: HarmonyColor.targetBullseyeRedColor]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).tintColor = .targetBullseyeRedColor
         return true
     }
 

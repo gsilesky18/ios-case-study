@@ -46,6 +46,7 @@ class DetailCoordinator: TempoCoordinator {
         let description = ProductDescriptionViewState(description: product.description)
         let addTo = ProductAddToViewState()
         viewState = DetailViewState(image: image, price: price, description: description, addTo: addTo)
+        viewController.title = product.title
         registerListeners()
     }
     
