@@ -18,7 +18,7 @@ struct ListViewState: TempoViewState, TempoSectionedViewState {
 
 /// View state for each list item.
 struct ListItemViewState: TempoViewStateItem, Equatable {
-    let id: String
+    let identifier: String
     let title: String
     let price: String
     let imageUrl: URL?
@@ -26,7 +26,8 @@ struct ListItemViewState: TempoViewStateItem, Equatable {
 }
 
 func ==(lhs: ListItemViewState, rhs: ListItemViewState) -> Bool {
-    return lhs.title == rhs.title
+    return lhs.identifier == rhs.identifier
+        && lhs.title == rhs.title
         && lhs.price == rhs.price
         && lhs.imageUrl == rhs.imageUrl
         && lhs.aisle == rhs.aisle

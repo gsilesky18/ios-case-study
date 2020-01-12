@@ -7,6 +7,7 @@
 
 import Foundation
 import Tempo
+import Kingfisher
 
 /*
  Coordinator for the product list
@@ -52,8 +53,8 @@ class ListCoordinator: TempoCoordinator {
     let productLoader: ProductLoader
     var products: [Product] = [] {
         didSet{
-            viewState.listItems = products.map({ product in
-                ListItemViewState(id: product._id, title: product.title, price: product.salePrice ?? product.price, imageUrl: URL(string: product.image), aisle: product.aisle.uppercased())
+            viewState.listItems = products.sorted(by: { $0.index < $1.index }).map({ product in
+                return ListItemViewState(identifier: product._id, title: product.title, price: product.salePrice ?? product.price, imageUrl: URL(string: product.image), aisle: product.aisle.uppercased())
             })
         }
     }
@@ -72,7 +73,7 @@ class ListCoordinator: TempoCoordinator {
     
     fileprivate func registerListeners() {
         dispatcher.addObserver(ListItemPressed.self) { [weak self] event in
-            if let product = self?.products.first(where: { $0._id == event.item.id }){
+            if let product = self?.products.first(where: { $0._id == event.item.identifier }){
                 let detailCoordinator = DetailCoordinator(product: product)
                 self?.viewController.show(detailCoordinator.viewController, sender: nil)
             }
