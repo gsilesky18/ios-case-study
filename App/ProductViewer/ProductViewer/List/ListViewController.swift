@@ -59,6 +59,8 @@ class ListViewController: UIViewController {
             NetworkingStatusOverlayPresenter(networkingStatusOverlayView: networkingStatusOverlayView)
         ]
 
+        //Hide title on back button when navigating to the detail view
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

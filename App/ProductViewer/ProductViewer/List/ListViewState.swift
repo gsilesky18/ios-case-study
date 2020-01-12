@@ -18,6 +18,7 @@ struct ListViewState: TempoViewState, TempoSectionedViewState {
 
 /// View state for each list item.
 struct ListItemViewState: TempoViewStateItem, Equatable {
+    let id: String
     let title: String
     let price: String
     let imageUrl: URL?

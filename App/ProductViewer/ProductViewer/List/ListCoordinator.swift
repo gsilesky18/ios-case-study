@@ -53,7 +53,7 @@ class ListCoordinator: TempoCoordinator {
     var products: [Product] = [] {
         didSet{
             viewState.listItems = products.map({ product in
-                ListItemViewState(title: product.title, price: product.salePrice ?? product.price, imageUrl: URL(string: product.image), aisle: product.aisle.uppercased())
+                ListItemViewState(id: product._id, title: product.title, price: product.salePrice ?? product.price, imageUrl: URL(string: product.image), aisle: product.aisle.uppercased())
             })
         }
     }
@@ -71,10 +71,11 @@ class ListCoordinator: TempoCoordinator {
     // MARK: ListCoordinator
     
     fileprivate func registerListeners() {
-        dispatcher.addObserver(ListItemPressed.self) { [weak self] e in
-            let alert = UIAlertController(title: "Item selected!", message: "🐶", preferredStyle: .alert)
-            alert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: nil) )
-            self?.viewController.present(alert, animated: true, completion: nil)
+        dispatcher.addObserver(ListItemPressed.self) { [weak self] event in
+            if let product = self?.products.first(where: { $0._id == event.item.id }){
+                let detailCoordinator = DetailCoordinator(product: product)
+                self?.viewController.show(detailCoordinator.viewController, sender: nil)
+            }
         }
     }
     
